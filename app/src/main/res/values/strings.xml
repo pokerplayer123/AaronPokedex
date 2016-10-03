@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AaronPokdex</string>
+    <string name="app_name">AaronPokedex</string>
     <string name="pokemon_image_description">Pokemon Image</string>
     <string name="title_activity_info_profile">PokemonInformation</string>
     <string name="pokemon_content_description">Pokemon photo</string>
