@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4584</color>
+    <color name="default_button">#8c8c8c</color>
+    <color name="layout_button_color">#00ffcd</color>
+    <color name="holo_orange_dark">#ff8a24</color>
+    <color name="holo_blue_blue_bright">#00ddff</color>
+    <color name="holo_purple_">#ffaa66cc</color>
+</resources>

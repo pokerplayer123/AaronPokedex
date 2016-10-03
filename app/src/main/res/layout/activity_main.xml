@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.aaron.myPokedex.MainActivity">
+
+    <Button
+        android:id="@+id/Weak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:onClick="toggleWeak"
+        android:text="@string/Weak"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:onClick="toggleMedium"
+        android:text="@string/Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/Weak"
+        app:layout_constraintLeft_toRightOf="@+id/Weak"
+        app:layout_constraintTop_toTopOf="@+id/Weak"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Strong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="toggleStrong"
+        android:text="@string/Strong"
+        app:layout_constraintBottom_toBottomOf="@+id/Medium"
+        app:layout_constraintLeft_toRightOf="@+id/Medium"
+        app:layout_constraintTop_toTopOf="@+id/Medium"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/change_layout_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/layout_button_color"
+        android:onClick="switchLayoutManager"
+        android:text="@string/linear"
+        app:layout_constraintBottom_toBottomOf="@+id/Strong"
+        app:layout_constraintLeft_toRightOf="@+id/Strong"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Strong" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pokemon_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Strong"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:onClick="startSearch"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        app:backgroundTint="@android:color/holo_blue_bright" />
+</android.support.constraint.ConstraintLayout>
