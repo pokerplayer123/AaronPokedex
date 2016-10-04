@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Aaron on 2/10/2016.
+ * This is the MainActivity which is used to initiate the app. 
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public void startSearch(View v) {
         startActivity(new Intent(getApplicationContext(), SearchPokedex.class));
     }
+    //Initiate the searchPokedexActivity
 
     public void switchLayoutManager(View v) {
         Button btn = (Button) v;
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
             btn.setText(R.string.linear);
         }
     }
+    /**
+    This method is used to switch the layout from a LinearLayout to a GridLayout to allow more or less pokemon to be displayed per row in the recyclerView
+     */
 
     public void toggleWeak(View v) {
         Button b = (Button) v;
@@ -59,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         buttonToggle[0] = !buttonToggle[0];
         filterPokemonList();
     }
+    //Changes the list of pokemon displayed using a filter
 
     public void toggleMedium(View v) {
         Button b = (Button) v;
@@ -79,6 +85,13 @@ public class MainActivity extends AppCompatActivity {
         buttonToggle[2] = !buttonToggle[2];
         filterPokemonList();
     }
+/**
+ *
+ *
+ *
+ *The toggle methods enable filtering based on the Attack value of the pokemon to determine which ones are Strong, weak or inbetween. This method can be re-written
+ * to filter pokemon based on type e.g. fire/grass/water...
+ */
 
     private boolean isWeak(int x) {
         return 0 <= x && x < 50;
