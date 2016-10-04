@@ -21,7 +21,8 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:background="@color/cardview_shadow_end_color">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -37,8 +38,9 @@
                 android:layout_height="188dp"
                 android:contentDescription="@string/pokemon_content_description"
                 android:fitsSystemWindows="true"
-                android:scaleType="fitXY"
-                app:layout_collapseMode="parallax" />
+                android:scaleType="fitCenter"
+                app:layout_collapseMode="parallax"
+                android:tint="@android:color/background_dark" />
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -51,6 +53,6 @@
         app:layout_anchorGravity="center_vertical|right"
         android:layout_gravity="center_vertical|right"
         app:backgroundTint="@android:color/holo_blue_bright"
-        app:srcCompat="@color/holo_blue_blue_bright" />
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
 
 </android.support.design.widget.CoordinatorLayout>
