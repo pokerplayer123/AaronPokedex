@@ -41,7 +41,7 @@
                 android:scaleType="fitCenter"
                 app:layout_collapseMode="parallax"
                 android:tint="@color/cardview_shadow_end_color"
-                app:srcCompat="@color/cardview_shadow_end_color" />
+                app:srcCompat="@color/holo_blue_blue_bright" />
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -51,9 +51,10 @@
         android:id="@+id/fab"
         android:layout_width="64dp"
         android:layout_height="54dp"
-        app:layout_anchorGravity="center_vertical|right"
-        android:layout_gravity="center_vertical|right"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_gravity="bottom|center_horizontal"
         app:backgroundTint="@android:color/holo_blue_bright"
-        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable"
+        app:layout_anchor="@+id/app_bar" />
 
 </android.support.design.widget.CoordinatorLayout>
