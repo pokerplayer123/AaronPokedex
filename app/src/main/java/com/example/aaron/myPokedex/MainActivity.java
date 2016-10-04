@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Aaron on 2/10/2016.
- * This is the MainActivity which is used to initiate the app. 
+ * This is the MainActivity which is used to initiate the app.
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 buttonToggle[1] && isMedium(x) ||
                 buttonToggle[2] && isStrong(x);
     }
+// method that returns a boolean for the filter
 
     private void filterPokemonList() {
         ArrayList<Pokedex.Pokemon> pokeListCopy = new ArrayList<>();
@@ -120,4 +121,5 @@ public class MainActivity extends AppCompatActivity {
         pokemonAdapter.setList(pokeListCopy);
         pokemonAdapter.notifyDataSetChanged();
     }
+    //The filter method which parses integers received from the pokemon arrayList to determine whether they are filtered or not. 
 }
