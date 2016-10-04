@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Aaron on 3/10/2016.
+ * An adapter class to allow the use of recyclerView
  */
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.CustomViewHolder> {

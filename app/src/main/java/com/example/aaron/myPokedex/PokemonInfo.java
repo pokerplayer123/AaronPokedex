@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Aaron on 3/10/2016.
+ * This class is for the pokemon_info activity
  */
 
 public class PokemonInfo extends AppCompatActivity {
@@ -62,6 +63,7 @@ public class PokemonInfo extends AppCompatActivity {
         pkDefense = (TextView) findViewById(R.id.pokemon_info_defense);
         pkType = (TextView) findViewById(R.id.pokemon_info_type);
     }
+    //binds the pokemon's details to each textView
 
     private void populateViewsWithPokemonData() {
         Glide.with(this).load(findUrl(pokemon.name)).into(pkInfo);
@@ -73,10 +75,11 @@ public class PokemonInfo extends AppCompatActivity {
         pkDefense.setText(pokemon.defense);
         pkType.setText(pokemon.type);
     }
-
+//This method populates the view with pokemon information
     private String findUrl(String name) {
         name = Normalizer.normalize(name.toLowerCase(), Normalizer.Form.NFD);
         name = name.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "").replaceAll("\\p{P}", "");
         return String.format("http://img.pokemondb.net/artwork/%s.jpg", name);
     }
+    //Method for finding the pokemon artworks from the pokemondb images, using the pokemon's name.
 }
