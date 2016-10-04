@@ -121,5 +121,5 @@ public class MainActivity extends AppCompatActivity {
         pokemonAdapter.setList(pokeListCopy);
         pokemonAdapter.notifyDataSetChanged();
     }
-    //The filter method which parses integers received from the pokemon arrayList to determine whether they are filtered or not. 
+    //The filter method which parses integers received from the pokemon arrayList to determine whether they are filtered or not.
 }
